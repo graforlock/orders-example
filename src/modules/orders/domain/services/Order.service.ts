@@ -7,10 +7,6 @@ import { OrdersRepository } from 'src/modules/orders/infrastructure/repository/O
 export class OrdersService {
   constructor(private readonly repository: OrdersRepository) {}
 
-  getHello(): string {
-    return 'Hello World!';
-  }
-
   async create(createOrderDto: CreateOrderDto): Promise<Order> {
     return await this.repository.create(createOrderDto);
   }

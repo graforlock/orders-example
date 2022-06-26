@@ -5,16 +5,16 @@ export type OrderDocument = Order & Document;
 
 @Schema()
 export class Order {
-  @Prop()
+  @Prop({ required: true })
   name: string;
 
-  @Prop()
+  @Prop({ required: true })
   qty: number;
 
-  @Prop()
+  @Prop({ required: true })
   price: number;
 
-  @Prop()
+  @Prop({ required: true })
   description: string;
 }
 
